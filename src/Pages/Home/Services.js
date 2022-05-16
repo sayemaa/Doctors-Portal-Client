@@ -41,7 +41,7 @@ const Services = () => {
                     />)
                 }
             </div>
-            <div className="hero min-h-screen">
+            <div className="hero min-h-screen mt-16 lg:mt-0">
                 <div className="hero-content flex-col lg:flex-row">
                     <img src={treatment} className="max-w-sm rounded-lg shadow-2xl w-full" />
                     <div className='lg:mx-10'>
