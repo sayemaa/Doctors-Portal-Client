@@ -8,6 +8,8 @@ const BookingModal = ({ date, treatment, setTreatment }) => {
         event.preventDefault();
         const slot = event.target.slot.value;
         console.log(_id, name, slot);
+
+        // to close the modal
         setTreatment(null)
     }
 
@@ -27,7 +29,7 @@ const BookingModal = ({ date, treatment, setTreatment }) => {
                             value={format(date, 'PP')}
                             className='input input-bordered w-full max-w-md'
                         />
-                        <select name="slot" class="select select-bordered w-full max-w-md">
+                        <select name="slot" className="select select-bordered w-full max-w-md">
                             {
                                 slots.map(slot => <option value={slot}>{slot}</option>)
                             }
@@ -45,7 +47,7 @@ const BookingModal = ({ date, treatment, setTreatment }) => {
                             className='input input-bordered w-full max-w-md'
                         />
                         <input
-                            type='number'
+                            type='text'
                             name='phone'
                             placeholder='Phone Number'
                             className='input input-bordered w-full max-w-md'
@@ -53,7 +55,7 @@ const BookingModal = ({ date, treatment, setTreatment }) => {
                         <input
                             type='submit'
                             value='Submit'
-                            className='btn btn-secondary w-full max-w-md'
+                            className='btn text-white border-0 bg-gradient-to-r from-secondary to-primary w-full max-w-md'
                         />
                     </form>
                 </div>
