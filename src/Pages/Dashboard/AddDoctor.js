@@ -69,7 +69,7 @@ const AddDoctor = () => {
     }
 
     return (
-        <div>
+        <div className='grid justify-items-center content-center mt-5'>
             <h2 className='text-2xl font-bold text-accent my-5'>Add a New Doctor</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -123,7 +123,7 @@ const AddDoctor = () => {
                     <label className="label">
                         <span className="label-text">Specialty</span>
                     </label>
-                    <select {...register("specialty")} class="select w-full max-w-xs input-bordered">
+                    <select {...register("specialty")} className="select w-full max-w-xs input-bordered">
                         {
                             services.map(service => <option
                                 key={service._id}

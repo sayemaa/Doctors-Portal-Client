@@ -15,7 +15,7 @@ const Navbar = () => {
     const menuItems = <>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/appointment">Appointment</Link></li>
-        <li><Link to="/review">Reviews</Link></li>
+        <li><Link to="/reviews">Reviews</Link></li>
         {
             user && <li><Link to="/dashboard">Dashboard</Link></li>
 
@@ -26,7 +26,7 @@ const Navbar = () => {
     </>
     return (
         <div className='bg-base-100'>
-            <div className="navbar max-w-7xl mx-auto">
+            <div className="navbar max-w-7xl mx-auto sticky-top-0">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex="0" className="btn btn-ghost lg:hidden">

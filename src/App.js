@@ -16,6 +16,9 @@ import MyHistory from './Pages/Dashboard/MyHistory';
 import Users from './Pages/Dashboard/Users';
 import RequireAdmin from './Pages/Login/RequireAdmin';
 import AddDoctor from './Pages/Dashboard/AddDoctor';
+import Contact from './Pages/ContactUs/Contact';
+import Footer from './Pages/Shared/Footer';
+import Reviews from './Pages/Reviews/Reviews';
 
 function App() {
     return (
@@ -23,7 +26,7 @@ function App() {
             <Navbar></Navbar>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="about" element={<About />} />
+                <Route path="reviews" element={<Reviews />} />
                 <Route path="appointment" element={
                     <RequireAuth>
                         <Appointment />
@@ -31,7 +34,7 @@ function App() {
                 } />
                 <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
                     <Route index element={<MyAppointments></MyAppointments>}></Route>
-                    <Route path="review" element={<MyReview></MyReview>}></Route>
+                    <Route path="myReview" element={<MyReview></MyReview>}></Route>
                     <Route path="history" element={<MyHistory></MyHistory>}></Route>
                     <Route path="users" element={<RequireAdmin>
                         <Users></Users>
@@ -42,9 +45,12 @@ function App() {
                     </RequireAdmin>}>
                     </Route>
                 </Route>
+                <Route path="contact" element={<Contact />} />
+                <Route path="about" element={<About />} />
                 <Route path="login" element={<Login />} />
                 <Route path="signup" element={<SignUp />} />
             </Routes>
+            <Footer />
             <ToastContainer />
         </div>
     );
