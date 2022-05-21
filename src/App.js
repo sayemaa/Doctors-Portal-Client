@@ -19,6 +19,7 @@ import AddDoctor from './Pages/Dashboard/AddDoctor';
 import Contact from './Pages/ContactUs/Contact';
 import Footer from './Pages/Shared/Footer';
 import Reviews from './Pages/Reviews/Reviews';
+import ManageDoctors from './Pages/Dashboard/ManageDoctors';
 
 function App() {
     return (
@@ -42,6 +43,10 @@ function App() {
                     </Route>
                     <Route path="addDoctor" element={<RequireAdmin>
                         <AddDoctor></AddDoctor>
+                    </RequireAdmin>}>
+                    </Route>
+                    <Route path="manageDoctor" element={<RequireAdmin>
+                        <ManageDoctors></ManageDoctors>
                     </RequireAdmin>}>
                     </Route>
                 </Route>
