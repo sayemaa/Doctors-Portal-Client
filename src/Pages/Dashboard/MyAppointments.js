@@ -12,7 +12,7 @@ const MyAppointments = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/booking?patient=${user.email}`, {
+            fetch(`https://blooming-cliffs-74232.herokuapp.com/booking?patient=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -31,7 +31,7 @@ const MyAppointments = () => {
                     setAppointments(data);
                 });
         }
-    }, [user, navigate])
+    }, [user])
 
     return (
         <div className='max-w-5xl mx-auto'>
