@@ -20,6 +20,7 @@ import Contact from './Pages/ContactUs/Contact';
 import Footer from './Pages/Shared/Footer';
 import Reviews from './Pages/Reviews/Reviews';
 import ManageDoctors from './Pages/Dashboard/ManageDoctors';
+import Payment from './Pages/Dashboard/Payment';
 
 function App() {
     return (
@@ -37,6 +38,7 @@ function App() {
                     <Route index element={<MyAppointments></MyAppointments>}></Route>
                     <Route path="myReview" element={<MyReview></MyReview>}></Route>
                     <Route path="history" element={<MyHistory></MyHistory>}></Route>
+                    <Route path="payment/:id" element={<Payment></Payment>}></Route>
                     <Route path="users" element={<RequireAdmin>
                         <Users></Users>
                     </RequireAdmin>}>

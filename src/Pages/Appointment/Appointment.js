@@ -10,7 +10,6 @@ const Appointment = () => {
         <div>
             <AppointmentBanner date={date} setDate={setDate} />
             <AvailableAppointments date={date} />
-            <Footer />
         </div>
     );
 };
