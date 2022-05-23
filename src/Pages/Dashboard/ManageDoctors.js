@@ -20,8 +20,8 @@ const ManageDoctors = () => {
     return (
         <div className='max-w-5xl mx-auto'>
             <h2 className='text-2xl font-bold text-accent my-5'>Manage Doctors</h2>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
                     <thead>
                         <tr>
                             <th></th>

@@ -27,19 +27,19 @@ const Payment = () => {
     return (
         <div className='grid justify-items-center content-center mt-5'>
             <h3 className="text-2xl font-bold text-accent mt-5">Payment</h3>
-            <div class="card w-80 max-w-md bg-base-100 shadow-xl my-12">
-                <div class="card-body">
-                    <p>Hello, <span className='text-secondary font-bold'> {appointment.patientName}</span></p>
-                    <h2 class="card-title">Pay for: <span className='text-secondary'>{appointment.treatment}</span></h2>
+            <div className="card w-96 max-w-md bg-base-100 shadow-xl mb-8 mt-6">
+                <div className="card-body">
+                    <p>Hello, <span className='font-bold'> {appointment.patientName}</span></p>
+                    <h2 className='text-lg'>Treatment: <span className='text-secondary font-bold'>{appointment.treatment}</span></h2>
                     <p>Your Appointment: <span className='text-secondary'>{appointment.date}</span></p>
                     <p>Time: {appointment.slot}</p>
-                    <p>Please pay: ${appointment.price}</p>
+                    <p>Price: ${appointment.price}</p>
                 </div>
             </div>
-            <div class="card flex-shrink-0 w-80 max-w-md shadow-2xl bg-base-100">
-                <div class="card-body">
+            <div className="card flex-shrink-0 w-96 max-w-md shadow-2xl bg-base-100">
+                <div className="card-body">
                     <Elements stripe={stripePromise}>
-                        <CheckoutForm />
+                        <CheckoutForm appointment={appointment} />
                     </Elements>
                 </div>
             </div>
